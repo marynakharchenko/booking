@@ -176,14 +176,14 @@ const advertList = [
         }
     }
 ];
-let mapContain = document.querySelector(".map");
-let mapPins = document.querySelector(".map__pins");
-let mapPinTemplate = document.querySelector("#pin").content.querySelector(".map__pin");;
-let mapCardTemplate = document.querySelector("#card").content.querySelector(".map__card");
-let cardPlace =  document.querySelector(".map__filters-container");
+const mapContain = document.querySelector(".map");
+const mapPins = document.querySelector(".map__pins");
+const mapPinTemplate = document.querySelector("#pin").content.querySelector(".map__pin");;
+const mapCardTemplate = document.querySelector("#card").content.querySelector(".map__card");
+const cardPlace =  document.querySelector(".map__filters-container");
 
 for (let i = 0; i < advertList.length; i++) {
-    let mapPin = mapPinTemplate.cloneNode(true);
+    const mapPin = mapPinTemplate.cloneNode(true);
     mapPin.style.left = `${advertList[i].location.x}px`;
     mapPin.style.top = `${advertList[i].location.y}px`;
     mapPin.querySelector("img").src = advertList[i].author.avatar;
